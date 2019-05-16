@@ -1,2 +1,2 @@
 # Libft
-This is a rereeation of some of the features of the Standard C Library.
+This is a recreation of some of the features of the Standard C Library.
