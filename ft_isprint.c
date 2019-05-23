@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:01:50 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/22 14:10:19 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/23 10:06:09 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int 	ft_isprint(int c);
+int 	ft_isprint(int c)
 {
 	if (c > 16 && c < 128)
-		returm (1);
+		return (1);
 	return (0);
 }

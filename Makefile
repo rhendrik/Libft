@@ -1,18 +1,18 @@
-SRC = *.c
 FLAG = -Wall -Werror -Wextra
 OPTION = -c
-HEADER = ./heads/mhead.h
-OBJ = *.o
+HEADER = libft.h
 NAME = libft.a
+
+.PHONY = clean fclean re
 
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) $(SRC)
-	ar rc $(NAME) $(OBJ)
+	gcc $(FLAG) $(OPTION) *.c
+	ar rc $(NAME) *.o
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf *.o
 
 fclean: clean
 	rm -rf $(NAME)

@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:03:24 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/23 10:06:23 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/23 10:28:31 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/23 15:31:36 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-int ft_toupper(int c)
+#include "ibft.h"
+
+int isnum(char *str)
 {
-	if (ft_isalpha(c) && c >= 97)
-		c = c - 32;
-	return (c);
+	int i;
+	int num;
+
+	i = 0;
+	num = 0;
+	while (str[i] != '\0')
+	{
+		if (num != 1 && (str[i] 
+	}
+}
+
+int ft_atoi(const char *str)
+{
+
 }
