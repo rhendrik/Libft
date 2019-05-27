@@ -1,55 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:28:31 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/27 09:26:33 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/27 10:26:54 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/27 11:14:15 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 #include <stdlib.h>
 
-int isnum(char *str)
+char *strncpy(char *dst, const char *src, size_t len)
 {
 	int i;
-	int num;
 
 	i = 0;
-	num = 0;
-	while (str[i] != '\0')
+	while(len > 0)
 	{
-		if (num != 1 && (str[i] >= 9 && str[i] <= 13 || str[i] == 32))	
-			i++;
-		if ((str[i] == '+' || atr[i] == '-') && num != 1)
-			i++;
-		if (ft_isdigit(str[i]))
-		{
-			num = 1;
-			i++;
-		}
-		else
-			return (0);
+		dst[i] = src[i];
+		i++;
+		len--;
 	}
-	return (1);
-}
-
-int isneg(char *str)
-{
-	if (isnum(str))
-
-}
-
-int ft_atoi(const char *str)
-{
-	int i;
-
-	i = 0;
-	if (isnum(str) != 1)
-		return (0);
-	else
-		if (
+	return (dst);
 }

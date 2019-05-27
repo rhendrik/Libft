@@ -6,13 +6,14 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/21 14:18:31 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:39:16 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	ifndef MHEAD_H
 #	define MHEAD_H
 
+#include <stdlib.h>
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -21,8 +22,8 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strlen(char *s);
-char	*ft_strcpy(char *dest, char *src);
-char	*ft_strncpy(char *dest, char *src, int n);
+char	*ft_strcpy(char *dest, const char *src);
+char	*ft_strncpy(char *dest, const char *src, size_t len);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 /*strnchr*/

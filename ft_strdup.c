@@ -1,55 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:28:31 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/27 09:26:33 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/27 11:14:35 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/27 12:49:24 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
-#include <stdlib.h>
 
-int isnum(char *str)
+int conststrlen(const char *s1)
 {
 	int i;
-	int num;
 
 	i = 0;
-	num = 0;
-	while (str[i] != '\0')
+	while (s1[i] != '\0')
+		i++;
+	return (i);
+}
+
+char *strdup(const char *s1)
+{
+	char *dup;
+	int i;
+
+	dup = (char *)malloc(conststrlen(s1) * sizeof(char));
+	i = 0;
+	while (s1[i] != '\0')
 	{
-		if (num != 1 && (str[i] >= 9 && str[i] <= 13 || str[i] == 32))	
-			i++;
-		if ((str[i] == '+' || atr[i] == '-') && num != 1)
-			i++;
-		if (ft_isdigit(str[i]))
-		{
-			num = 1;
-			i++;
-		}
-		else
-			return (0);
+		dup[i] = s1[i];
+		i++;
 	}
-	return (1);
-}
-
-int isneg(char *str)
-{
-	if (isnum(str))
-
-}
-
-int ft_atoi(const char *str)
-{
-	int i;
-
-	i = 0;
-	if (isnum(str) != 1)
-		return (0);
-	else
-		if (
+	dup[i] = '\0';
+	return (dup);
 }
