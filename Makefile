@@ -1,5 +1,5 @@
 FLAG = -Wall -Werror -Wextra
-OPTION = -c
+OPTION = -c -I ./libft.h
 HEADER = libft.h
 NAME = libft.a
 
