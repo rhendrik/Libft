@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   issame.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 13:39:43 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/28 10:41:16 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/28 12:17:05 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/28 12:18:10 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char *strchr(const char *s, int c)
+int issame(int a, int b)
 {
-	int i;
-
-	i = 0;
-	while(s[i] != '\0')
-	{
-		if (s[i] == c)
-		{
-			return ((char *)&s[i]);
-		}
-		else
-			i++;
-	}
-	return (NULL);
+	if (a == b)
+		return (1);
+	return (0);
 }
