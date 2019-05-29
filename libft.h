@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/28 12:18:49 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/29 10:35:11 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #	define MHEAD_H
 
 #include <stdlib.h>
+#include <unistd.h>
 int		issame(int a, int b);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

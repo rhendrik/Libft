@@ -8,7 +8,7 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) *.c
+	gcc $(FLAG) $(OPTION) ft_*
 	ar rc $(NAME) *.o
 
 clean:
