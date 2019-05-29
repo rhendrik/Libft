@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:18:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/29 10:59:15 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/29 15:37:45 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ int main(int ac, char **av)
 		write(1, "true\n", 10);
 		return (0);
 	}
-	else if ((*charfun)(av[2][0] == 0))
+	else if ((*charfun)(av[2][0]) == 0)
 	{
-		write(1, "true\n", 10);
+		write(1, "false\n", 10);
 		return (0);
 	}
 	return (0);
