@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   teststrbool.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:03:24 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 10:25:06 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/30 10:27:03 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/30 10:53:13 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
+#include <string.h>
 
-int	ft_toupper(int c)
+int main(int ac, char **av)
 {
-	if (ft_isalpha(c) && c >= 97)
-		c = c - 32;
-	return (c);
+	if (ac != 2)
+		return (0);
+	if (ft_strlen(av[1]) == strlen(av[1]))
+		write(1, "success!\n", 10);
+	else
+		write(1, "Nope\n", 10);
+	return (0);
 }

@@ -6,12 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:05:51 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/23 10:04:17 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/30 10:26:18 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int 	ft_tolower(int c)
+
+int	ft_tolower(int c)
 {
 	if (ft_isalpha(c) && c <= 90)
 		c = c + 32;

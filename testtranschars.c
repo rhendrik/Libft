@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   testtranschars.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:03:24 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 10:25:06 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/30 09:07:22 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/30 10:24:33 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
 
-int	ft_toupper(int c)
+int main(int ac, char **av)
 {
-	if (ft_isalpha(c) && c >= 97)
-		c = c - 32;
-	return (c);
+	char c;
+	int(*charfun)(int c);
+
+	if (ac != 3)
+		return (0);
+	switch (av[1][0])
+	{
+		case '1':
+			charfun = &ft_toupper;
+			break;
+
+		case '2':
+			charfun = &ft_tolower;
+			break;
+	}
+   	c = (charfun)(av[2][0]);
+	write(1, &c, 1);
+	write(1, "\n", 1);
+	return (0);
 }

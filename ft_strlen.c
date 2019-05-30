@@ -6,11 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:06:54 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/21 15:08:12 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/30 10:51:39 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+#include "libft.h"
+
+size_t	ft_strlen(char *s)
 {
 	int i;
 

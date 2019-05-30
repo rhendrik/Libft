@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:23:35 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/29 13:24:33 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/30 14:43:19 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./lbft.h"
+#include "./libft.h"
 
-int is upper(int c)
+int isupper(int c)
 {
 	if (c >= 'A' || c <= 'Z')
 		return (1);

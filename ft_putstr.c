@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:03:24 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 10:25:06 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/30 11:10:34 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/05/30 11:15:06 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void ft_putstr(char *str)
 {
-	if (ft_isalpha(c) && c >= 97)
-		c = c - 32;
-	return (c);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		ft_putchar(str[i++]);
 }
