@@ -6,12 +6,12 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:55:49 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/31 12:47:07 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/01 17:03:33 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libft.h"
+#include "../libft.h"
 
 int main(int ac, char **av)
 {

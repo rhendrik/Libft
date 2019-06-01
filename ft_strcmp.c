@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testtranschars.c                                   :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 09:07:22 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 10:24:33 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/01 17:21:34 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/01 17:41:26 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int main(int ac, char **av)
+int ft_strcmp(const char *s1, const char *s2)
 {
-	char c;
-	int(*charfun)(int c);
+	int i;
 
-	if (ac != 3)
-		return (0);
-	switch (av[1][0])
+	i = 0;
+	while(s1[i] != '\0' && s1[i] == s2[i])
 	{
-		case '1':
-			charfun = &ft_toupper;
-			break;
-
-		case '2':
-			charfun = &ft_tolower;
-			break;
+		i++;
 	}
-   	c = (charfun)(av[2][0]);
-	write(1, &c, 1);
-	write(1, "\n", 1);
-	return (0);
+	return (((unsigned char *)s1 + i) - ((unsigned char *)s2 + i));
 }

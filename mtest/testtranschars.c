@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   testtranschars.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:52 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/01 16:41:40 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/05/30 09:07:22 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/01 17:01:16 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "./libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+int main(int ac, char **av)
 {
-	size_t i;
+	char c;
+	int(*charfun)(int c);
 
-	i = 0;
-	if (dest < src)
+	if (ac != 3)
 		return (0);
-	while (src[i] != '\0')
+	switch (av[1][0])
 	{
-		dest[i] = src[i];
-		i++;
+		case '1':
+			charfun = &ft_toupper;
+			break;
+
+		case '2':
+			charfun = &ft_tolower;
+			break;
 	}
-	dest[i] = '\0';
-	return (dest);
+   	c = (charfun)(av[2][0]);
+	write(1, &c, 1);
+	write(1, "\n", 1);
+	return (0);
 }

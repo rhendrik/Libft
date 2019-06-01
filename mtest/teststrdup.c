@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   teststrdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:52 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/01 16:41:40 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/01 17:03:46 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/01 17:17:38 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "./libft.h"
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_strcpy(char *dest, const char *src)
+int main(int ac, char **av)
 {
-	size_t i;
+	(void)ac;
+	char *bleh;
 
-	i = 0;
-	if (dest < src)
-		return (0);
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	bleh = ft_strdup(av[1]);
+	printf("%si\n", bleh);
+	bleh = strdup(av[1]);
+	printf("%s\n", bleh);
+	return (0);
 }

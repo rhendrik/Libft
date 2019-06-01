@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   strcpytest.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:52 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/01 16:41:40 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/01 16:14:15 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/01 16:48:48 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "./libft.h"
+#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_strcpy(char *dest, const char *src)
+int main(int ac, char **av)
 {
-	size_t i;
+	(void)ac;
+	char *bleh;
 
-	i = 0;
-	if (dest < src)
-		return (0);
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	bleh = ft_strncpy(av[1], av[2], 5);
+	printf("%s\n", bleh);
+	bleh = strncpy(av[1], av[2], 5);
+	printf("%s\n", bleh);
+	return (0);
 }
