@@ -6,10 +6,11 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 10:55:49 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 15:32:03 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/31 12:47:07 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 int main(int ac, char **av)
@@ -24,7 +25,7 @@ int main(int ac, char **av)
 	{
 		case '1':
 			bleh = ft_strcpy(av[2], av[3]);
-			ft_putstr(bleh);
+			printf("%s", bleh);
 			ft_putchar('\n');
 			break;
 		

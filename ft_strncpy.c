@@ -6,14 +6,14 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:26:54 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 14:00:19 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/31 11:03:28 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
-char *strncpy(char *dst, const char *src, size_t len)
+char *ft_strncpy(char *dst, const char *src, size_t len)
 {
 	int i;
 

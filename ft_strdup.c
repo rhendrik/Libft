@@ -6,11 +6,11 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:14:35 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 13:56:56 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/05/31 11:04:15 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 int conststrlen(const char *s1)
 {
@@ -22,7 +22,7 @@ int conststrlen(const char *s1)
 	return (i);
 }
 
-char *strdup(const char *s1)
+char *ft_strdup(const char *s1)
 {
 	char *dup;
 	int i;
