@@ -22,7 +22,7 @@ char *strncat(char *s1, const char *s2, size_t n)
 	c1 = 0;
 	c2 = ft_strlen((char *)s2);
 	s1 = (char *)malloc(len * sizeof(char));
-	while (n >= 0)
+	while (n == 0)
 	{
 		s1[c1++] = s2[c2++];
 		n--;
