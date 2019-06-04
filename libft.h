@@ -30,9 +30,10 @@ char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t len);
 char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
-char	*strrchr(const char *s, int c);
-/*strstr*/
-/*strnstr*/
+char	*ft_strrchr(const char *s, int c);
+/*char *ft_strstr(const char *haystack, const char *needle);
+strnstr*/
+char *ft_strcat(char *s1, const char *s2)
 char *ft_strncat(char *dest, const char *src, size_t n);
 int ft_strcmp(const char *s1, const char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);

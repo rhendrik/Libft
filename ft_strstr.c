@@ -10,45 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
-char *strstr(const char *haystack, const char *needle)
+char *ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 	int j;
 	int k;
-	int l;
 	char *ptr;
 
-	ptr = NULL;
 	i = 0;
 	j = 0;
-	k = 0;
-	l = 0;
-	while (haystack[i] != '\0')
+	while (haystack[i])
 	{
-		if (haystack[i] == needle[0])
+		if (issame((int)haystack[i], (int)needle[0]))
 		{
-			if (needle[j - 1] == '\0')
-				ptr = (char *)&haystack[i];
+			ptr = haystack[i];
 			k = i;
-			while (needle[j] != '\0' && l != 1)
+			while(needle[j])
 			{
-				if (haystack[i] == needle[j])
+				if (issame((int)haystack[i], (int)needle[j]))
 				{
-					i++;
+					k++;
 					j++;
 				}
 				else
-				{
-					i = k;
-					l = 1;
-					j = 0;
-				}
-			}
-			i++;
-			l = 0;
+
+
 		}
 	}
-	return (ptr);
 }
