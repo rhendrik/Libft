@@ -6,18 +6,20 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 13:39:43 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/31 11:03:48 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/06 09:55:58 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int i;
 
 	i = 0;
-	while(s[i] != '\0')
+	if (c == '\0')
+		return ((char *)&s[ft_strlen((char *)s)]);
+	while (s[i] != '\0')
 	{
 		if (s[i] == c)
 		{

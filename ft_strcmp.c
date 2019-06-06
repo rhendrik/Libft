@@ -6,20 +6,41 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 17:21:34 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/01 17:41:26 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:56:08 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int ft_strcmp(const char *s1, const char *s2)
+unsigned int smin(const char s1, const char s2)
 {
-	int i;
+	unsigned int s1i;
+	unsigned int s2i;
+
+	s1i = s1;
+	s2i = s2;
+	return (s1i - s2i);
+}
+
+int	ft_strcmp(const char *s1, const char *s2)
+{
+	int				i;
 
 	i = 0;
-	while(s1[i] != '\0' && s1[i] == s2[i])
+	if (s1[0] == '\0' || s2[0] == '\0')
+		return ((unsigned char)s1[0] - (unsigned char)s2[0]);
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
-		i++;
+		if (s1[i] == s2[i])
+			i++;
+		else if (s1[i] != s2[i])
+		{
+			return (smin(s1[i], s2[i]));
+		}
+		if (s1[i] == '\0' || s2[i] == '\0')
+		{
+			return (smin(s1[i], s2[i]));
+		}
 	}
-	return (((unsigned char *)s1 + i) - ((unsigned char *)s2 + i));
+	return (smin(s1[i], s2[i]));
 }
