@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/09 03:15:56 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/10 14:25:26 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ char *ft_strcat(char *s1, const char *s2);
 char *ft_strncat(char *dest, const char *src, size_t n);
 int ft_strcmp(const char *s1, const char *s2);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
-int ft_atoi(const char *str);
+int ft_atoi(const char *nptr);
 /*memset*/
 /*bzero*/
 void *ft_memcpy(void *dest, const void *src, size_t n);
 void *ft_memccpy(void *dest, const void *src, int c, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
-/*memcmp*/
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 void ft_putstr(char *str);
 void ft_putchar(char c);
 /*ft_lstnew*/

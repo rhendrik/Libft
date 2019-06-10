@@ -15,5 +15,5 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 		n--;
 	}
-	return (dest);
+	return ((void *)dest);
 }

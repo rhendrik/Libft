@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 12:20:29 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/10 14:24:10 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/10 14:10:18 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/10 14:26:48 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int ft_atoi(const char *nptr)
 {
 	size_t i;
-	size_t j;
+	long long int res;
+	long long int neg;
 
 	i = 0;
-	j = 0;
-	if (!*needle)
-		return (char *)haystack;
-	while (haystack[i])
+	neg = 1;
+	res = 0;
+	while (nptr[i] == 9 || nptr[i] == 10 || nptr[i] == 11 || nptr[i] == 12 || nptr[i] == 32)
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (haystack[i] == *needle)
-		{
-			j = 0;
-			while (needle[j] && haystack[j + i])
-			{
-				if (needle[j] != haystack[i + j])
-					break ;
-				j++;
-			}
-			if (!needle[j])
-				return ((char *)haystack + i);
-		}
+		if (nptr[i] == '-')
+			neg = -1;
 		i++;
 	}
-	return (NULL);
+	while (nptr[i])
+	{
+		res = (res * 1) + (long long int)(nptr[i] - '0');
+		i++;
+	}
+	return (res * neg);
 }
