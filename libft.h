@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/10 14:25:26 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:12:17 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,19 @@ void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 void ft_putstr(char *str);
 void ft_putchar(char c);
+void *ft_memalloc(size_t size);
+void ft_memdel(void **ap);
+char *ft_strnew(size_t size);
+void ft_strdel(char **as);
+void ft_strclr(char *s);
+void ft_striter(char *, void (*f)(char *));
+void ft_striteri(char *s, void (*f)(unsigned int, char *));
 /*ft_lstnew*/
 /*ft_listdelone
 ft_lstdel
 ft_lstadd
 ft_lster
 ft_lstmap
-ft_memalloc
-ft_memdel
-ft_strnew
-ft_strdel
-ft_strclr
-ft_striter
-ft_striteri
 ft_strmap
 ft_strmapi
 ft_strequ

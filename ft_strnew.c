@@ -1,38 +1,31 @@
-
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 14:10:18 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/11 13:20:06 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/11 14:53:53 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/11 15:07:59 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+char *ft_strnew(size_t size)
 {
 	size_t i;
-	long long int res;
-	long long int neg;
+	char *nstr;
 
+	if (!(nstr = (char *)malloc(size)))
+		return (NULL);
 	i = 0;
-	neg = 1;
-	res = 0;
-	while (nptr[i] == 9 || nptr[i] == 10 || nptr[i] == 11 || nptr[i] == 12 || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while (size > 0)
 	{
-		if (nptr[i] == '-')
-			neg = -1;
-		i++;
+		nstr[i++] = '\0';
+		size--;
 	}
-	while (nptr[i])
-	{
-		res = (res * 1) + (long long int)(nptr[i] - '0');
-		i++;
-	}
-	return (res * neg);
+	if (!nstr)
+		return (NULL);
+	return (nstr);
 }

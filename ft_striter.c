@@ -1,38 +1,26 @@
-
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/10 14:10:18 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/11 13:20:06 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/11 15:59:17 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/11 16:10:49 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+void ft_striter(char *s, void (*f)(char *))
 {
 	size_t i;
-	long long int res;
-	long long int neg;
 
 	i = 0;
-	neg = 1;
-	res = 0;
-	while (nptr[i] == 9 || nptr[i] == 10 || nptr[i] == 11 || nptr[i] == 12 || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (s == NULL || f == NULL)
+		return ;
+	while(*s)
 	{
-		if (nptr[i] == '-')
-			neg = -1;
-		i++;
+		(*f)(s++);
 	}
-	while (nptr[i])
-	{
-		res = (res * 1) + (long long int)(nptr[i] - '0');
-		i++;
-	}
-	return (res * neg);
 }
