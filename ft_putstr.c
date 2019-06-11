@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:10:34 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/05/30 11:15:06 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/11 16:30:14 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void ft_putstr(char *str)
 	int i;
 
 	i = 0;
+	if (!str || str == NULL)
+		return ;
 	while (str[i] != '\0')
 		ft_putchar(str[i++]);
 }
