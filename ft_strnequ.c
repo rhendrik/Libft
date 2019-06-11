@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 16:31:00 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/11 16:57:50 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/11 17:18:58 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/11 17:28:31 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmap(const char *s, char (*f)(char))
+int ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
-	char *ret;
-
-	i = 0;
-	if (s == NULL || f == NULL)
-		return (NULL);
-	if (!(ret = (char *)malloc(ft_strlen((char *)s) * sizeof(char))))
-		return (NULL);
-	while (s[i])
+	if ((s1 && !s2) || (s2 && !s1))
+		return (0);
+	if (!s1 && !s2)
+		return(1);
+	while (n >= 0 && (s1[n] || s2[n]))
 	{
-		ret[i] = (*f)(s[i]);
-		i++;
+		if (s1[n] != s2[n])
+			return (0);
+		n--;
 	}
-	ret[i] = '\0';
-	return (ret);
+	return (1);
 }
