@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 13:56:53 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 09:01:28 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/12 13:55:38 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/12 14:36:53 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void ft_putnbr(int n)
 {
-	char	*array;
-	int		i;
 
-	array = (char *)malloc(size * sizeof(char));
-	if (array == NULL)
-		return (NULL);
-	i = 0;
-	while (size > 0)
+	if (n > 2147483647 || n < -2147483648)
+		return ;
+	if (n == 2147483647 || n == -2147483648)
 	{
-		array[i++] = 0;
-		size--;
+		if (n == -2147483648)
+		{
+			ft_putstr("-2147483648");
+			return ;
+		}
+		else if (n == 2147483647)
+		{
+			ft_putstr("2147483647");
+			return ;
+		}
 	}
-	return ((void *)array);
+	if (n < 0)
+	{
+		n = n * -1;
+		ft_putchar('-');
+	}
+	if (n < 10)
+	{
+		ft_putchar(n + 48);
+		return ;
+	}
+	ft_putnbr(n / 10);
+	ft_putchar((n % 10) + 48);
+	return ;
 }

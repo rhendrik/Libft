@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:52 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 13:51:39 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/12 08:02:28 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/12 08:50:38 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "./libft.h"
+#include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char *ft_strjoin(const char *s1, const char *s2)
 {
+	size_t len;
+	char *ret;
 	size_t i;
+	size_t j;
 
 	i = 0;
-	while (src[i] != '\0')
+	j = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	if (!(ret = (char *)malloc(len * sizeof(char))))
+		return (NULL);
+	while (s1[i])
 	{
-		dest[i] = src[i];
+		ret[i] = s1[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	while (s2[j])
+	{
+		ret[i + j] = s2[j];
+		j++;
+	}
+	ret[i + j] = '\0';
+	return (ret);
 }

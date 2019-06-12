@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/11 17:21:11 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/12 14:22:01 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
-void ft_putstr(char *str);
+void ft_putstr(const char *str);
 void ft_putchar(char c);
 void *ft_memalloc(size_t size);
 void ft_memdel(void **ap);
@@ -59,21 +59,21 @@ char *ft_strmap(const char *s, char (*f)(char));
 char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
 int ft_strequ(const char *s1, const char *s2);
 int ft_strnequ(const char *s1, const char *s2, size_t n);
+char *ft_strsub(const char *s, unsigned int start, size_t len);
+char *ft_strjoin(const char *s1, const char *s2);
+char *ft_strtrim(const char *s);
+void ft_putendl(const char *s);
+void ft_putnbr(int n);
 /*ft_lstnew*/
 /*ft_listdelone
 ft_lstdel
 ft_lstadd
 ft_lster
 ft_lstmap
-ft_strsub
-ft_strjoin
-ft_strtrim
 ft_strsplit
 ft_itoa
 ft_putchar
 ft_putstr
-ft_putendl
-ft_putnbr
 ft_putchar_fd
 ft_putstr_fd
 ft_putendl_fd

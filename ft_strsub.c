@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:52 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 13:51:39 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/12 07:50:46 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/12 13:40:00 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "./libft.h"
+#include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char *ft_strsub(const char *s, unsigned int start, size_t len)
 {
 	size_t i;
+	char *ret;
 
 	i = 0;
-	while (src[i] != '\0')
+	if (s == NULL)
+		return (NULL);
+	if (!(ret = (char *)malloc(len + 1 * sizeof(char))))
+		return (NULL);
+	while (len > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		ret[i++] = s[start++];
+		len--;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (ret);
 }

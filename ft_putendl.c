@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:52 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 13:51:39 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/12 13:50:41 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/12 13:55:30 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "./libft.h"
+#include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+void ft_putendl(const char *s)
 {
-	size_t i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	ft_putstr(s);
+	ft_putchar('\n');
 }
