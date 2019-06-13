@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 14:22:01 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/13 12:17:34 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,10 @@ char *ft_strjoin(const char *s1, const char *s2);
 char *ft_strtrim(const char *s);
 void ft_putendl(const char *s);
 void ft_putnbr(int n);
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(const char *s, int fd);
+void ft_putendl_fd(const char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
 /*ft_lstnew*/
 /*ft_listdelone
 ft_lstdel
@@ -71,13 +75,7 @@ ft_lstadd
 ft_lster
 ft_lstmap
 ft_strsplit
-ft_itoa
-ft_putchar
-ft_putstr
-ft_putchar_fd
-ft_putstr_fd
-ft_putendl_fd
-ft_putnbr_fd*/
+ft_itoa*/
 
 
 #	endif
