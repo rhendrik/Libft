@@ -14,7 +14,7 @@
 
 void ft_putchar(char c)
 {
-	if (c < 0 || c > 127)
+	if (!ft_isascii(c))
 		return ;
 	write(1, &c, 1);
 }
