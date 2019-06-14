@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:53:53 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/11 15:07:59 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/14 14:41:57 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char *ft_strnew(size_t size)
 	size_t i;
 	char *nstr;
 
-	if (!(nstr = (char *)malloc(size)))
+	if (!(nstr = (char *)malloc(size + 1 * sizeof(char))))
 		return (NULL);
 	i = 0;
 	while (size > 0)
@@ -25,6 +25,7 @@ char *ft_strnew(size_t size)
 		nstr[i++] = '\0';
 		size--;
 	}
+	nstr[i] = '\0';
 	if (!nstr)
 		return (NULL);
 	return (nstr);

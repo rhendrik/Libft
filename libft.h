@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/13 12:17:34 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:17:45 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,14 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(const char *s, int fd);
 void ft_putendl_fd(const char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+char *ft_itoa(int n);
+char **ft_strsplit(const char *s, char c);
 /*ft_lstnew*/
 /*ft_listdelone
 ft_lstdel
 ft_lstadd
 ft_lster
-ft_lstmap
-ft_strsplit
-ft_itoa*/
+ft_lstmap*/
 
 
 #	endif

@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 07:50:46 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 13:40:00 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/14 14:38:24 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char *ft_strsub(const char *s, unsigned int start, size_t len)
 		ret[i++] = s[start++];
 		len--;
 	}
+	ret[i] = '\0';
 	return (ret);
 }
