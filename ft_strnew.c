@@ -6,16 +6,16 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 14:53:53 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/14 14:41:57 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:07:18 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
-	size_t i;
-	char *nstr;
+	size_t	i;
+	char	*nstr;
 
 	if (!(nstr = (char *)malloc(size + 1 * sizeof(char))))
 		return (NULL);

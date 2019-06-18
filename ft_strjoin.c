@@ -6,18 +6,18 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 08:02:28 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 08:50:38 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:02:33 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t len;
-	char *ret;
-	size_t i;
-	size_t j;
+	size_t	len;
+	char	*ret;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

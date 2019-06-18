@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 11:50:05 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/13 12:06:17 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 11:56:51 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(const char *s, int fd)
+void	ft_putstr_fd(const char *s, int fd)
 {
 	size_t i;
 
@@ -21,7 +21,7 @@ void ft_putstr_fd(const char *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		write (fd, &s[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

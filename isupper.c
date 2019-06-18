@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:23:35 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/06 14:30:09 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:11:22 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-int isupper(int c)
+int	isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);

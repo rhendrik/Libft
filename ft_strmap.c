@@ -6,16 +6,16 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 16:31:00 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/14 14:44:21 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 12:03:43 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmap(const char *s, char (*f)(char))
+char	*ft_strmap(const char *s, char (*f)(char))
 {
-	size_t i;
-	char *ret;
+	size_t	i;
+	char	*ret;
 
 	i = 0;
 	if (s == NULL || f == NULL)

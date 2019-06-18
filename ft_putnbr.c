@@ -6,27 +6,31 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 13:55:38 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/13 12:09:51 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/18 08:45:08 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr(int n)
+static int	minmax(int n)
 {
-	if (n == 2147483647 || n == -2147483648)
+	if (n == INTMIN)
 	{
-		if (n == -2147483648)
-		{
-			ft_putstr("-2147483648");
-			return ;
-		}
-		else if (n == 2147483647)
-		{
-			ft_putstr("2147483647");
-			return ;
-		}
+		ft_putstr(MINSTR);
+		return (1);
 	}
+	if (n == INTMAX)
+	{
+		ft_putstr(MAXSTR);
+		return (1);
+	}
+	return (0);
+}
+
+void		ft_putnbr(int n)
+{
+	if (minmax(n) == 1)
+		return ;
 	if (n < 0)
 	{
 		n = n * -1;

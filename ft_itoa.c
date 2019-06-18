@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 09:06:38 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/14 12:30:27 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 11:27:21 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int l_strlen(int n)
+static int	l_strlen(int n)
 {
 	size_t i;
 
@@ -22,22 +22,18 @@ static int l_strlen(int n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	size_t strlen;
-	char *s;
-	int n_cpy;
-	char * min;
-	char * max;
+	size_t	strlen;
+	char	*s;
+	int		n_cpy;
 
 	n_cpy = n;
-	min = "-2147483648";
-	max = "2147483647";
 	strlen = l_strlen(n);
-	if (n == -2147483648)
-		return (min);
-	if (n == 2147483647)
-		return (max);
+	if (n == INTMIN)
+		return (MINSTR);
+	if (n == INTMAX)
+		return (MAXSTR);
 	if (n < 0)
 	{
 		strlen++;

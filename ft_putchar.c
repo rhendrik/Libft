@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:12:15 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/12 13:53:44 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/17 11:48:56 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./libft.h"
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	if (!ft_isascii(c))
 		return ;
