@@ -5,66 +5,55 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/17 11:25:32 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/17 11:44:59 by rhendrik         ###   ########.fr       */
+/*   Created: 2019/06/19 08:47:29 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/06/19 08:54:42 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	valid(const char *nptr)
+int negbool(const char **s)
 {
-	int valid;
-	size_t i;
+	int isneg;
 
-	valid = 0;
-	i = 0;
-	while (nptr[i])
+	isneg = 0;
+	while (**s == ' ' || **s == '\t' || **s == '\f' || **s == '\v'
+			|| **s == '\n' || **s == '\r')
+		++*s;
+	if (**s == '-')
 	{
-		if (ft_isdigit(nptr[i]))
-			valid = 1;
-		i++;
+		isneg = 1;
+		++*s;
 	}
-	return (valid);
+	else if (**s == '+')
+		++*s;
+	return (isneg);
 }
 
-static int	minmax(const char *nptr)
+int ft_atoi(const char *str)
 {
-	if (nptr == MAXSTR)
-		return (INTMAX);
-	if (nptr == MINSTR)
+	int ret;
+	int isneg;
+	const char *s;
+
+	s = str;
+	isneg = negbool(&s);
+	ret = 0;
+	if (str == MINSTR)
 		return (INTMIN);
-	return (0);
-}
-
-int			ft_atoi(const char *nptr)
-{
-	size_t			i;
-	long long int	res;
-	long long int	neg;
-
-	i = 0;
-	neg = 1;
-	res = 0;
-	if (valid(nptr) == 0)
-		return (0);
-	i = 0;
-	if (nptr == MAXSTR || nptr == MINSTR)
-		return (minmax(nptr));
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-			|| nptr[i] == '\v' || nptr[i] == '\r' || nptr[i] == '\f')
+	while (ft_isdigit(*s))
 	{
-		i++;
+		ret *= 10;
+		ret += *s - '0';
+		if (ret < 0 && isneg == 1)
+			return (0);
+		if (ret < 0)
+			return (-1);
+		++s;
 	}
-	if ((nptr[i] == '-' && ft_isdigit(nptr[i + 1]))
-			|| (nptr[i] == '+' && ft_isdigit(nptr[i + 1])))
+	if (isneg)
 	{
-		if (nptr[i++] == '-')
-			neg = -1;
+		ret = ret * -1;
 	}
-	while (nptr[i++])
-	{
-		res = (res * 10) + (long long int)(nptr[i] - '0');
-	}
-	return (res * neg);
+	return (ret);
 }
