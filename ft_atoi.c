@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/19 08:47:29 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/19 08:54:42 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:02:43 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int negbool(const char **s)
+int	negbool(const char **s)
 {
 	int isneg;
 
@@ -30,11 +30,11 @@ int negbool(const char **s)
 	return (isneg);
 }
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int ret;
-	int isneg;
-	const char *s;
+	int			ret;
+	int			isneg;
+	const char	*s;
 
 	s = str;
 	isneg = negbool(&s);

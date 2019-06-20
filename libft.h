@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/18 16:31:05 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/06/19 09:19:37 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ char				*ft_itoa(int n);
 char				**ft_strsplit(const char *s, char c);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 void				ft_bzero(void *s, size_t n);
-void 				*ft_memrcpy(void *dest, const void *src, size_t n);
+void				*ft_memrcpy(void *dest, const void *src, size_t n);
 
 #	endif
