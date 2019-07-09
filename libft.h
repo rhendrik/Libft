@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:00:48 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/23 16:06:58 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/07/09 09:15:20 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #define MAXSTR "2147483647"
 
 unsigned int		smin(const char s1, const char s2);
+void 				*ft_meemset(void *s, int c, size_t n);
 int					islower(int c);
 int					isupper(int c);
 int					issame(int a, int b);

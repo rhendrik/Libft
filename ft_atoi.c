@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/19 08:47:29 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/19 09:02:43 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/07/09 09:17:14 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	negbool(const char **s)
+static int	negbool(const char **s)
 {
 	int isneg;
 
@@ -30,7 +30,7 @@ int	negbool(const char **s)
 	return (isneg);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int			ret;
 	int			isneg;
@@ -39,8 +39,10 @@ int	ft_atoi(const char *str)
 	s = str;
 	isneg = negbool(&s);
 	ret = 0;
-	if (str == MINSTR)
+	if (ft_strcmp(str, MINSTR) == 0)
 		return (INTMIN);
+	if (ft_strcmp(str, MAXSTR) == 0)
+		return (INTMAX);
 	while (ft_isdigit(*s))
 	{
 		ret *= 10;
@@ -52,8 +54,6 @@ int	ft_atoi(const char *str)
 		++s;
 	}
 	if (isneg)
-	{
 		ret = ret * -1;
-	}
 	return (ret);
 }

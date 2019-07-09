@@ -6,13 +6,13 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 13:22:29 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/17 12:10:58 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/07/08 08:02:00 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int islower(int c)
+int	islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);

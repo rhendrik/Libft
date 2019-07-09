@@ -6,7 +6,7 @@
 /*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/14 09:06:38 by rhendrik          #+#    #+#             */
-/*   Updated: 2019/06/17 11:27:21 by rhendrik         ###   ########.fr       */
+/*   Updated: 2019/07/09 09:35:15 by rhendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char		*ft_itoa(int n)
 		strlen++;
 		n_cpy = -n;
 	}
-	if (!(s = ft_strnew(strlen)))
+	if (!(s = ft_strnew(strlen + 1)))
 		return (NULL);
 	s[strlen--] = n_cpy % 10 + '0';
 	while (n_cpy /= 10)
