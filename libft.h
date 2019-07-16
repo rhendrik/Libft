@@ -26,6 +26,8 @@ typedef struct s_list
 	size_t content_size;
 	struct s_list *next;
 } t_list;
+void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
+void ft_lstdel(t_list **alst, void (*del)(void *,size_t));
 unsigned int		smin(const char s1, const char s2);
 t_list				*ft_lstnew(const void *content, size_t content_size);
 void				*ft_memset(void *s, int c, size_t n);
@@ -85,5 +87,6 @@ char				**ft_strsplit(const char *s, char c);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memrcpy(void *dest, const void *src, size_t n);
+
 
 #	endif
