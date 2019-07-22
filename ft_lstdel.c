@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rhendrik <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/22 08:20:20 by rhendrik          #+#    #+#             */
+/*   Updated: 2019/07/22 08:21:42 by rhendrik         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_lstdel(t_list **alist,void (*del)(void *, size_t))
+void	ft_lstdel(t_list **alist, void (*del)(void *, size_t))
 {
-	if((*alist)->next)
+	if ((*alist)->next)
 	{
 		ft_lstdel(&(*alist), del);
 	}
